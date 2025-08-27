@@ -15,14 +15,14 @@ import {
   git,
   figma,
   docker,
-
+genuiImg,
   meta,
   starbucks,
   tesla,
   shopify,
   carrent,
   jobit,
-  
+  datachef,
   tripguide,
   threejs,
 } from "../assets";
@@ -117,7 +117,7 @@ const experiences = [
     company_name: "Sukusala Technologies",
     icon: skt,
     iconBg: "#383E56",
-    date: "June 2024 - Present",
+    date: "June 2024 - Jan 2025",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams  and other developers to create high-quality products.",
@@ -125,6 +125,19 @@ const experiences = [
       "Designed and implemented interactive React components for a No-Code platform, improving usability and increasing platform usage by 8%.",
     ],
   },
+  {
+  title: "Fullstack Developer",
+  company_name: "Data Chef",
+  icon: datachef, // replace with your imported asset
+  iconBg: "#383E56",
+  date: "Jan 2025 - Present", // adjust if different
+  points: [
+    "Designed and implemented a responsive and modern UI to enhance user experience.",
+    "Developed and enhanced features for Academy 360, a college administration and student management system, including Library Management, Attendance Tracking, and Role-Based Login.",
+    "Collaborated with cross-functional teams, actively contributing ideas and improving overall system functionality."
+  ],
+}
+
   
 ];
 
@@ -177,6 +190,20 @@ const projects = [
     image: fit,
     source_code_link: "https://github.com/RounitSingh/FitGrocery",
   },
+  {
+  name: "Gen UI",
+  description:
+    "AI-powered tool to generate and edit custom UI components or landing pages from simple prompts, with live preview and export-ready code.",
+  tags: [
+    { name: "React", color: "blue-text-gradient" },
+    { name: "Zustand", color: "green-text-gradient" },
+    { name: "TailwindCSS", color: "pink-text-gradient" },
+    { name: "Framer Motion", color: "purple-text-gradient" }
+  ],
+  image: genuiImg, // replace with your imported asset
+  source_code_link: "https://genui-preview.vercel.app/"
+},
+
   {
     name: "JobHunt",
     description:

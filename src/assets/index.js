@@ -25,10 +25,12 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import datachef from "./company/datachef.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import genuiImg from "./genui.png";
 
 export {
   logo,
@@ -42,6 +44,7 @@ export {
   css,
   docker,
   figma,
+  datachef,
   git,
   html,
   javascript,
@@ -49,6 +52,7 @@ export {
   nodejs,
   reactjs,
   redux,
+  genuiImg,
   tailwind,
   typescript,
   threejs,
