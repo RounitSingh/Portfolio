@@ -198,7 +198,7 @@ const projects = [
     { name: "React", color: "blue-text-gradient" },
     { name: "Zustand", color: "green-text-gradient" },
     { name: "TailwindCSS", color: "pink-text-gradient" },
-    { name: "Framer Motion", color: "purple-text-gradient" }
+    
   ],
   image: genuiImg, // replace with your imported asset
   source_code_link: "https://genui-preview.vercel.app/"
