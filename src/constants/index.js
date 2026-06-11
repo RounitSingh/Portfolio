@@ -23,6 +23,7 @@ genuiImg,
   carrent,
   jobit,
   datachef,
+  techsahyogi,
   tripguide,
   threejs,
 } from "../assets";
@@ -123,6 +124,7 @@ const technologies = [
 ];
 
 const experiences = [
+ 
   {
     title: "Frontend Developer",
     company_name: "Sukusala Technologies",
@@ -131,25 +133,36 @@ const experiences = [
     date: "June 2024 - Jan 2025",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams  and other developers to create high-quality products.",
+      "Collaborating with cross-functional teams and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Designed and implemented interactive React components for a No-Code platform, improving usability and increasing platform usage by 8%.",
     ],
   },
+ 
   {
-  title: "Fullstack Developer",
-  company_name: "Data Chef",
-  icon: datachef, // replace with your imported asset
-  iconBg: "#383E56",
-  date: "Jan 2025 - Present", // adjust if different
-  points: [
-    "Designed and implemented a responsive and modern UI to enhance user experience.",
-    "Developed and enhanced features for Academy 360, a college administration and student management system, including Library Management, Attendance Tracking, and Role-Based Login.",
-    "Collaborated with cross-functional teams, actively contributing ideas and improving overall system functionality."
-  ],
-}
-
-  
+    title: "Full Stack Developer",
+    company_name: "DataChef",
+    icon: datachef,
+    iconBg: "#383E56",
+    date: "Jan 2025 - Oct 2025",
+    points: [
+      "Implemented full-stack applications using React, Node.js, Express.js, and PostgreSQL to deliver scalable features.",
+      "Developed and maintained RESTful APIs for scalable and secure data operations.",
+      "Collaborated on 2+ projects, participating in code reviews and debugging to ensure optimal performance.",
+    ],
+  },
+  {
+    title: "Full Stack Developer",
+    company_name: "Tech Sahyogi Innoventure Pvt. Ltd",
+    icon: techsahyogi,
+    iconBg: "#ffffff",
+    date: "Oct 2025 - Present",
+    points: [
+      "Developed and maintained Academic 360, an academic management platform managing student records, attendance, and academic operations for 500+ users.",
+      "Built scalable RESTful APIs and responsive user interfaces, reducing manual academic workflow effort by 40%.",
+      "Collaborated with developers to troubleshoot issues, optimize backend performance, and improve application response time by 30%.",
+    ],
+  },
 ];
 
 const testimonials = [

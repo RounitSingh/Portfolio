@@ -1,6 +1,43 @@
 @use "@material/fab";
 @include fab.core-styles;
 
+.fab-border-wrap {
+  position: relative;
+  display: inline-flex;
+  padding: 2px;
+  border-radius: 9999px;
+  overflow: hidden;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -120%;
+    background: conic-gradient(
+      from 0deg,
+      transparent 0%,
+      rgba(212, 175, 55, 0.15) 12%,
+      rgba(212, 175, 55, 0.55) 22%,
+      #d4af37 32%,
+      #f5d76e 40%,
+      #d4af37 48%,
+      rgba(212, 175, 55, 0.55) 58%,
+      transparent 70%
+    );
+    animation: fab-border-spin 3s linear infinite;
+  }
+
+  &:hover::before {
+    animation-duration: 2s;
+  }
+}
+
+@keyframes fab-border-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .mdc-fab {
   --mdc-fab-container-color: transparent;
   --mdc-fab-icon-color: #ffffff;
@@ -12,7 +49,9 @@
   background: rgba(255, 255, 255, 0.08) !important;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(212, 175, 55, 0.45) !important;
+  position: relative;
+  z-index: 1;
+  border: none !important;
   box-shadow:
     0 0 14px rgba(212, 175, 55, 0.45),
     0 0 30px rgba(212, 175, 55, 0.2),
@@ -23,7 +62,6 @@
 
   &:hover {
     background: rgba(255, 255, 255, 0.12) !important;
-    border-color: rgba(212, 175, 55, 0.55) !important;
     box-shadow:
       0 0 18px rgba(212, 175, 55, 0.45),
       0 0 32px rgba(212, 175, 55, 0.2),

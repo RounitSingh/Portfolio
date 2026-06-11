@@ -26,6 +26,7 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import datachef from "./company/datachef.png";
+import techsahyogi from "./company/ts-logo.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -45,6 +46,7 @@ export {
   docker,
   figma,
   datachef,
+  techsahyogi,
   git,
   html,
   javascript,
