@@ -15,6 +15,8 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  badge,
+  highlighted,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -24,7 +26,9 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className={`bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full${
+          highlighted ? " project-card-highlight" : ""
+        }`}
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -32,6 +36,12 @@ const ProjectCard = ({
             alt='project_image'
             className='w-full h-full object-cover rounded-2xl'
           />
+
+          {badge && (
+            <span className='absolute top-3 left-3 px-3 py-1 rounded-full text-[12px] font-semibold uppercase tracking-wide gold-badge-gradient'>
+              {badge}
+            </span>
+          )}
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
@@ -97,4 +107,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects");

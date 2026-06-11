@@ -4,11 +4,30 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
+// Desktop PC model: tall monitor + base, centered on X; Y shifts it down, Z sets depth.
+const MODEL_CONFIG = {
+  desktop: {
+    scale: 0.75,
+    position: [0, -3.25, -1.5],
+    rotation: [-0.01, -0.2, -0.1],
+    camera: { position: [20, 3, 5], fov: 25 },
+  },
+  mobile: {
+    scale: 0.40,
+    position: [1.5, -2.2, -0.4],
+    rotation: [-0.01, -0.2, -0.1],
+    camera: { position: [20, 2.5, 5], fov: 28 },
+  },
+};
+
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
+  const { scale, position, rotation } = isMobile
+    ? MODEL_CONFIG.mobile
+    : MODEL_CONFIG.desktop;
 
   return (
-    <mesh>
+    <group>
       <hemisphereLight intensity={0.15} groundColor='black' />
       <spotLight
         position={[-20, 50, 10]}
@@ -21,11 +40,11 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={scale}
+        position={position}
+        rotation={rotation}
       />
-    </mesh>
+    </group>
   );
 };
 
@@ -53,13 +72,18 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  const { camera } = isMobile ? MODEL_CONFIG.mobile : MODEL_CONFIG.desktop;
+
   return (
     <Canvas
       frameloop='demand'
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={camera}
       gl={{ preserveDrawingBuffer: true }}
+      className={
+        isMobile ? "!absolute !inset-0 !h-full !w-full z-[1]" : undefined
+      }
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls

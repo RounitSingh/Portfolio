@@ -1,0 +1,68 @@
+@use "@material/fab";
+@include fab.core-styles;
+
+.mdc-fab {
+  --mdc-fab-container-color: transparent;
+  --mdc-fab-icon-color: #ffffff;
+  --mdc-fab-extended-label-text-color: #ffffff;
+  --mdc-fab-extended-focus-label-text-color: #ffffff;
+  --mdc-fab-extended-hover-label-text-color: #ffffff;
+  --mdc-fab-extended-pressed-label-text-color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.45) !important;
+  box-shadow:
+    0 0 14px rgba(212, 175, 55, 0.45),
+    0 0 30px rgba(212, 175, 55, 0.2),
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  animation: fab-gold-glow 2.5s ease-in-out infinite;
+  transition: background 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(212, 175, 55, 0.55) !important;
+    box-shadow:
+      0 0 18px rgba(212, 175, 55, 0.45),
+      0 0 32px rgba(212, 175, 55, 0.2),
+      0 8px 32px rgba(0, 0, 0, 0.38),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+    animation: none;
+  }
+}
+
+@keyframes fab-gold-glow {
+  0%, 100% {
+    box-shadow:
+      0 0 10px rgba(212, 175, 55, 0.35),
+      0 0 24px rgba(212, 175, 55, 0.15),
+      0 8px 32px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(212, 175, 55, 0.6),
+      0 0 40px rgba(212, 175, 55, 0.28),
+      0 8px 32px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+}
+
+.mdc-fab__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.mdc-fab--extended .mdc-fab__label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}

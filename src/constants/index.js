@@ -33,14 +33,25 @@ import fit from "../assets/fit.png";
 import Tictac from "../assets/Tictac.png";
 import skt from "../assets/skt.jpg";
 
+import resumePDF from "../assets/Rounit Singh Resume.pdf";
+export const resumeUrl = resumePDF;
+
 export const navLinks = [
   {
     id: "about",
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "experience",
+    title: "Experience",
+  },
+  {
+    id: "tech",
+    title: "Tech",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -168,6 +179,8 @@ const testimonials = [
   // },
 ];
 
+// Optional `badge` — label on the card image (e.g. "New", "Featured").
+// Optional `highlighted: true` — gold ring + glow on the whole card.
 const projects = [
   {
     name: "FitGrocery",
@@ -191,18 +204,19 @@ const projects = [
     source_code_link: "https://github.com/RounitSingh/FitGrocery",
   },
   {
-  name: "Gen UI",
-  description:
-    "AI-powered tool to generate and edit custom UI components or landing pages from simple prompts, with live preview and export-ready code.",
-  tags: [
-    { name: "React", color: "blue-text-gradient" },
-    { name: "Zustand", color: "green-text-gradient" },
-    { name: "TailwindCSS", color: "pink-text-gradient" },
-    
-  ],
-  image: genuiImg, // replace with your imported asset
-  source_code_link: "https://genui-preview.vercel.app/"
-},
+    name: "GenUI Studio",
+    description:
+      "AI-powered tool to generate and edit custom UI components or landing pages from simple prompts, with live preview and export-ready code.",
+    tags: [
+      { name: "React", color: "blue-text-gradient" },
+      { name: "Zustand", color: "green-text-gradient" },
+      { name: "TailwindCSS", color: "pink-text-gradient" },
+    ],
+    image: genuiImg,
+    source_code_link: "https://genui-preview.vercel.app/",
+    badge: "New",
+    highlighted: true,
+  },
 
   {
     name: "JobHunt",

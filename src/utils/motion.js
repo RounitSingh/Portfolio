@@ -17,22 +17,30 @@ export const textVariant = (delay) => {
 };
 
 export const fadeIn = (direction, type, delay, duration) => {
+  const transition = {
+    type: type || "tween",
+    delay: delay ?? 0,
+  };
+
+  if (type === "spring") {
+    transition.stiffness = 80;
+    transition.damping = 18;
+  } else {
+    transition.duration = duration ?? 0.6;
+    transition.ease = [0.22, 1, 0.36, 1];
+  }
+
   return {
     hidden: {
-      x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+      x: direction === "left" ? 80 : direction === "right" ? -80 : 0,
+      y: direction === "up" ? 80 : direction === "down" ? -80 : 0,
       opacity: 0,
     },
     show: {
       x: 0,
       y: 0,
       opacity: 1,
-      transition: {
-        type: type,
-        delay: delay,
-        duration: duration,
-        ease: "easeOut",
-      },
+      transition,
     },
   };
 };

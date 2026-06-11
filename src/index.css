@@ -49,6 +49,44 @@
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 
+.gold-badge-gradient {
+  background: #d4af37;
+  background: linear-gradient(135deg, #b8860b 0%, #f5d76e 45%, #d4af37 100%);
+  color: #1a1200;
+  border: 1px solid rgba(255, 235, 160, 0.65);
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.4),
+    0 4px 16px rgba(184, 134, 11, 0.45),
+    0 0 20px rgba(245, 215, 110, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  animation: badge-glow 2.5s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes badge-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 2px 10px rgba(0, 0, 0, 0.4),
+      0 4px 16px rgba(184, 134, 11, 0.45),
+      0 0 20px rgba(245, 215, 110, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 4px 14px rgba(0, 0, 0, 0.45),
+      0 6px 22px rgba(184, 134, 11, 0.6),
+      0 0 28px rgba(245, 215, 110, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+}
+
+.project-card-highlight {
+  box-shadow:
+    0 0 0 1px rgba(212, 175, 55, 0.4),
+    0 12px 40px -12px rgba(212, 175, 55, 0.35);
+}
+
 .orange-text-gradient {
   background: #f12711; /* fallback for old browsers */
   background: -webkit-linear-gradient(
